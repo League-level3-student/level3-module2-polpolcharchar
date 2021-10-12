@@ -9,8 +9,34 @@ public class _01_SortedArrayChecker {
      * and false otherwise.
      */
     public static boolean intArraySorted(int[] arr) {
-        
-        return false;
+        boolean result = true;
+    	for(int i = 0; i < arr.length; i++) {
+    		
+    		for(int j = 0; j < arr.length - 1; j++) {
+    			
+    			if(arr[j] > arr[j + 1]) {
+    				result = false;
+    			}
+    			
+    		}
+    		
+    	}
+    	
+    	
+    	
+        return result;
+    }
+    
+    public static boolean doubleArraySorted(double[] arr) {
+    	boolean result = true;
+    	for(int i = 0; i < arr.length; i++) {
+    		for(int j = 0; j < arr.length - 1; j++) {
+    			if(arr[j] > arr[j + 1]) {
+    				result = false;
+    			}	
+    		}	
+    	}
+    	return result;
     }
 
     /*
@@ -22,6 +48,20 @@ public class _01_SortedArrayChecker {
      */
 
 
+    public static boolean charArraySorted(char[] arr) {
+    	boolean result = true;
+    	for(int i = 0; i < arr.length; i++) {
+    		for(int j = 0; j < arr.length - 1; j++) {
+    			if(arr[j] > arr[j + 1]) {
+    				result = false;
+    			}	
+    		}	
+    	}
+    	return result;
+    }
+    
+    
+    
     /*
      * 3. Write a static method called charArraySorted.
      * 
@@ -31,6 +71,18 @@ public class _01_SortedArrayChecker {
      * integers).
      */
 
+    public static boolean stringArraySorted(String[] arr) {
+    	boolean result = true;
+    	for(int i = 0; i < arr.length; i++) {
+    		for(int j = 0; j < arr.length - 1; j++) {
+    			if(arr[j].compareTo(arr[j + 1]) > 0) {
+    				result = false;
+    			}	
+    		}	
+    	}
+    	return result;
+    }
+    
 
     /*
      * 4. Write a static method called stringArraySorted.
