@@ -98,4 +98,16 @@ public class Algorithms {
     	}
     	return arr;
     }
+    public static List<String> sortWords(List<String> arr){
+    	for(int i = 0; i < arr.size(); i++) {
+    		for(int j = 0; j < arr.size() - 1; j++) {
+    			if(arr.get(j).equals(arr.get(j + 1))) {
+    				String placeholder = arr.get(j);
+    				arr.set(j, arr.get(j + 1));
+    				arr.set(j + 1, placeholder);
+    			}
+    		}
+    	}
+    	return arr;
+    }
 }
